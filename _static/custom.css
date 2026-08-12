@@ -1,3 +1,44 @@
+.logo-subtitle {
+  font-weight: 700;
+  color: var(--pst-color-muted);
+}
+
+/* Purdue gold registration button.
+   Matches the .purdue-btn.btn-gold style used on the EBEC page
+   (https://engineering.purdue.edu/Engr/Academics/Undergraduate/ebec). */
+.sd-btn-gold {
+  color: #000 !important;
+  background-color: #cfb991 !important;
+  border-color: #cfb991 !important;
+  border-radius: 4px !important;
+  padding: 8px 24px !important;
+  font-size: 18px !important;
+  font-weight: 900 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  line-height: 27px !important;
+  display: inline-flex !important;
+  box-shadow: rgba(142, 111, 62, 0.3) 0 1px 2px 0 !important;
+}
+.sd-btn-gold:hover,
+.sd-btn-gold:focus {
+  color: #fff !important;
+  background-color: #000 !important;
+  border-color: #cfb991 !important;
+}
+
+/* Prevent the navbar logo title from wrapping at narrow widths; shrink instead.
+   Use a container query so the font scales with the logo image — both are
+   constrained by .navbar-brand width, so cqw keeps them proportional. */
+.navbar-brand {
+  container-type: inline-size;
+}
+.navbar-brand .logo__title {
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: clamp(0.4rem, 6.3cqw, 1.5rem);
+}
+
 .text-left{
   text-align: left !important;
 }
